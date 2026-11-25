@@ -27,7 +27,7 @@ jobs:
       run: python setup.py
 
     - name: Exécuter le test unitaire
-      run: python tests/test_database.py
+      run: PYTHONPATH=. python tests/test_database.py
 
     - name: Vérifier la qualité du code avec PyLint
       run: pylint --exit-zero *.py
